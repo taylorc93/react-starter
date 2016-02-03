@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Boilerplate for ReactJS project with hot code reloading",
   "scripts": {
-    "start": "node server.js",
-    "lint": "eslint src"
+    "start": "node config/server.js",
+    "build": "NODE_ENV=production webpack --config config/prod.js",
+    "profile": "webpack --config config/prod.js --profile --json > stats.json"
   },
   "repository": {
     "type": "git",
@@ -21,11 +22,8 @@
     "edit",
     "webpack"
   ],
-  "author": "Dan Abramov <dan.abramov@me.com> (http://github.com/gaearon)",
+  "author": "Connor Taylor (http://github.com/taylorc93)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/gaearon/react-hot-boilerplate/issues"
-  },
   "homepage": "https://github.com/gaearon/react-hot-boilerplate",
   "devDependencies": {
     "babel-core": "^6.0.20",
